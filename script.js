@@ -2,7 +2,7 @@
 
 let sequencia = [];
 
-const RNG = arr => {
+const GerarSequencia = arr => {
   if (arr.length === 6) {
     return;
   }
@@ -21,12 +21,12 @@ const RNG = arr => {
     arr.push(numero);
   }
 
-  RNG(arr);
+  GerarSequencia(arr);
 };
 
 document.querySelector('.check').addEventListener('click', function () {
   sequencia = [];
-  RNG(sequencia);
+  GerarSequencia(sequencia);
 
   document.querySelector('.number').textContent = sequencia
     .sort((a, b) => a - b)
